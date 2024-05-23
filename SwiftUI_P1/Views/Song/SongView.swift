@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct SongView: View {
+    // MARK: - Properties
     @ObservedObject var viewModel: SongViewModel
     
+    // MARK: - Initialiser
     init(viewModel: SongViewModel = SongViewModel()) {
         self.viewModel = viewModel
     }
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            
+            // MARK: - Button
             Button(action: {
                 viewModel.toggleAlternateText()
             }) {
@@ -31,6 +36,7 @@ struct SongView: View {
                     .padding(EdgeInsets(top: 12, leading: 16, bottom: 0, trailing: 0))
             }
             
+            // MARK: - Title Text
             Text("ჯუზონები და რამე")
                 .foregroundColor(.white)
                 .font(.system(size: 9))
@@ -38,6 +44,7 @@ struct SongView: View {
             
             Spacer().frame(height: 52)
             
+            // MARK: - Song Text
             Text(viewModel.songText)
                 .foregroundColor(.white)
                 .font(.system(size: 17))
@@ -49,6 +56,8 @@ struct SongView: View {
         .background(Color("YellowBackground"))
         .cornerRadius(18)
         .overlay(
+            
+            // MARK: - Guitar Image
             Image("guitar")
                 .resizable()
                 .aspectRatio(contentMode: .fit)

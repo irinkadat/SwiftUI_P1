@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
     @ObservedObject var viewModel = ContentViewModel()
     let items: [ListItemData] = sampleItems
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            
+            // MARK: - Title
             Text("Svibti Iuai Eksersaisi")
                 .font(.system(size: 34, weight: .bold))
                 .foregroundColor(.white)
                 .padding(EdgeInsets(top: 22, leading: 18, bottom: 0, trailing: 0))
             
             HStack(spacing: 13) {
+                
+                // MARK: - SongView and ChatView Stack
                 SongView()
                 VStack(spacing: 10) {
                     ChatView()
@@ -27,6 +33,7 @@ struct ContentView: View {
             }
             .padding(EdgeInsets(top: 7, leading: 12, bottom: 30, trailing: 23))
             
+            // MARK: - List
             List {
                 Section {
                     ForEach(items, id: \.title) { item in
@@ -44,6 +51,8 @@ struct ContentView: View {
             }
             .listStyle(.plain)
         }
+        
+        // MARK: - Arrow Button Overlay
         .overlay(
             Button(action: {
                 viewModel.toggleIconColor()

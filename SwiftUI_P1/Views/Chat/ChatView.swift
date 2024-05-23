@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct ChatView: View {
+    // MARK: - Properties
     @ObservedObject var viewModel: ChatViewModel
     
+    // MARK: - Initialiser
     init(viewModel: ChatViewModel = ChatViewModel()) {
         self.viewModel = viewModel
     }
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             
+            // MARK: - Button
             Button(action: {
                 viewModel.toggleBackground()
             }) {
@@ -33,6 +37,8 @@ struct ChatView: View {
                     .padding(.top, 12)
                 
             }
+            
+            // MARK: - Title Text
             Text("ჯუზონები და რამე")
                 .foregroundColor(.white)
                 .font(.system(size: 9))
@@ -43,6 +49,8 @@ struct ChatView: View {
         .background(Color(viewModel.backgroundColor))
         .cornerRadius(18)
         .overlay (
+            
+            // MARK: - Message Icon Image
             Image("messageIcon")
                 .resizable()
                 .aspectRatio(contentMode: .fit)

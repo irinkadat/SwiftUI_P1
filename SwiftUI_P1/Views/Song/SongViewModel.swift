@@ -8,12 +8,13 @@
 import Foundation
 
 final class SongViewModel: ObservableObject {
+    // MARK: - Properties
     @Published var isAlternateText = false
-    
     var songText: String {
         return isAlternateText ? "Martla ki ara:dd" : "We love property wrappers and closures"
     }
     
+    // MARK: - Methods
     func toggleAlternateText() {
         isAlternateText.toggle()
     }

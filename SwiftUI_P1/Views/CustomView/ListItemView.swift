@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ListItemView: View {
+    // MARK: - Properties
     var data: ListItemData
     
+    // MARK: - Body
     var body: some View {
         HStack {
             Image("invoice")

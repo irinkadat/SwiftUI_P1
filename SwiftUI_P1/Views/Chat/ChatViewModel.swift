@@ -8,12 +8,13 @@
 import Foundation
 
 final class ChatViewModel: ObservableObject {
+    // MARK: - Properties
     @Published var isPurpleBackground = false
-    
     var backgroundColor: String {
         return isPurpleBackground ? "PurpleBackground" : "OrangeBackground"
     }
     
+    // MARK: - Methods
     func toggleBackground() {
         isPurpleBackground.toggle()
     }

@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct NewsView: View {
+    // MARK: - Properties
     @ObservedObject var viewModel: NewsViewModel
     
+    // MARK: - Initialiser
     init(viewModel: NewsViewModel = NewsViewModel()) {
         self.viewModel = viewModel
     }
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
+            
+            // MARK: - Button
             Button(action: {
                 viewModel.toggleBackground()
             }) {
@@ -31,6 +36,7 @@ struct NewsView: View {
                     .padding(EdgeInsets(top: 12, leading: 16, bottom: 0, trailing: 0))
             }
             
+            // MARK: - Text
             Text("ცეცხლოვანი სიახლეები")
                 .foregroundColor(.white)
                 .font(.system(size: 9))
@@ -41,6 +47,8 @@ struct NewsView: View {
         .background(Color(viewModel.backgroundColor))
         .cornerRadius(18)
         .overlay(
+            
+            // MARK: - Speaker Image
             Image("speaker")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
