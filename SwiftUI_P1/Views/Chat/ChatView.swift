@@ -19,7 +19,6 @@ struct ChatView: View {
     // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
-            
             // MARK: - Button
             Button(action: {
                 viewModel.toggleBackground()

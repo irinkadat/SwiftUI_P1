@@ -18,8 +18,7 @@ struct NewsView: View {
     
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading) {
-            
+        VStack(alignment: .leading, spacing: 4) {
             // MARK: - Button
             Button(action: {
                 viewModel.toggleBackground()
@@ -47,7 +46,6 @@ struct NewsView: View {
         .background(Color(viewModel.backgroundColor))
         .cornerRadius(18)
         .overlay(
-            
             // MARK: - Speaker Image
             Image("speaker")
                 .resizable()

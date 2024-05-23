@@ -19,7 +19,6 @@ struct SongView: View {
     // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            
             // MARK: - Button
             Button(action: {
                 viewModel.toggleAlternateText()
