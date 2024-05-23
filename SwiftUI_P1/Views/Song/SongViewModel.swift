@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SongViewModel: ObservableObject {
+final class SongViewModel: ObservableObject {
     @Published var isAlternateText = false
     
     var songText: String {

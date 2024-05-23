@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NewsViewModel: ObservableObject {
+final class NewsViewModel: ObservableObject {
     @Published var isBlueBackground = false
     
     var backgroundColor: String {

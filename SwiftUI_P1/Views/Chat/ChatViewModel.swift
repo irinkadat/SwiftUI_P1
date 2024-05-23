@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ChatViewModel: ObservableObject {
+final class ChatViewModel: ObservableObject {
     @Published var isPurpleBackground = false
     
     var backgroundColor: String {

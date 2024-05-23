@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ContentViewModel: ObservableObject {
+final class ContentViewModel: ObservableObject {
     @Published var isIconYellow = false
     
     var backgroundColor: String {
