@@ -31,7 +31,7 @@ struct ContentView: View {
                     NewsView()
                 }
             }
-            .padding(EdgeInsets(top: 7, leading: 12, bottom: 30, trailing: 23))
+            .padding(EdgeInsets(top: 7, leading: 12, bottom: 28, trailing: 23))
             
             // MARK: - List
             List {
@@ -42,7 +42,6 @@ struct ContentView: View {
                                 0
                             }
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
-                            .listRowSeparator(.visible, edges: .all)
                             .listRowSeparatorTint(.gray)
                     }
                     .listRowBackground(Color.clear)

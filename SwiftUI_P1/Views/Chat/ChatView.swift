@@ -44,7 +44,6 @@ struct ChatView: View {
                 .font(.system(size: 9))
                 .padding(.leading, 16)
         }
-        
         .frame(width: 170, height: 110, alignment: .topLeading)
         .background(Color(viewModel.backgroundColor))
         .cornerRadius(18)
